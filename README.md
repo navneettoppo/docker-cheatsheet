@@ -10,7 +10,7 @@
 ## 2. Docker Registry and Repository
 | Command | Meaning | Syntax |
 | --- | --- | --- |
-| Login to a Registry | This command helps you log in to your Registry | ``` docker login \| docker login localhost:8080 ``` |
+| Login to a Registry | This command helps you log in to your Registry | ``` docker login ``` \| ``` docker login localhost:8080 ``` |
 | Logout from a registry | This command helps you log out from your Registry | docker logout \| docker logout localhost:8080 |
 | Searching an image | By using this docker command you can search any image from your docker | search nginx |
 | | | docker search --filter stars=3 --no-trun nginx |
