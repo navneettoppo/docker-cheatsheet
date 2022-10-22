@@ -9,5 +9,6 @@
 
 ## 2. Docker Registry and Repository
 | Command | Meaning | Syntax |
-| Login to a Registry | This command helps you log in to your Registry |``` docker login 
-                                                                            docker login localhost:8080 ```|
+| --- | --- | --- |
+| Login to a Registry | This command helps you log in to your Registry | ``` docker login 
+                                                                             docker login localhost:8080 ``` |
