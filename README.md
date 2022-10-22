@@ -20,8 +20,8 @@
 | Command | Meaning | Syntax |
 | --- | --- | --- |
 | Command to create a container	| This command is used to create a container without running | ```docker container create -t -i eon01/infinite --name XYZ``` |
-| Command to run a container | This command is used to run a container | ```docker container run -it --name XYZ -d eon01/infinite``` |
-| Command to rename a container | Use this command to rename a container | ```docker container rename XYZ infinity```|
+| Command to run a container | This command is used to run a container | ``` docker container run -it --name XYZ -d eon01/infinite ``` |
+| Command to rename a container | Use this command to rename a container |```docker container rename XYZ infinity ```|
 | Command for removing a container | This command is used to remove container in the topic | ```docker container rm infinite``` |
 | Update a container | This command is used to update container in the topic | ```docker container update --cpu-shares 512 -m 300M infinite``` |
 
