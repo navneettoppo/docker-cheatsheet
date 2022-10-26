@@ -25,7 +25,7 @@
 |removing a container | to remove container in the topic | ```docker container rm infinite``` |
 | Update a container | to update container in the topic | ```docker container update --cpu-shares 512 -m 300M infinite``` |
 
-## 4. Commands for Starting or Stopping the Container
+## 4. Starting or Stopping the Container
 | Command | Meaning | Syntax |
 | --- | --- | --- |
 |starting a container | starting a container | ```docker container start nginx``` |
@@ -53,3 +53,32 @@
 | Inspecting changes to files or directories on a container’s filesystem | inspecting changes to files or directories on a container’s filesystem | ```docker container diff infinite``` |
 
 ## 6. Managing Images
+| Command | Meaning | Syntax |
+| --- | --- | --- |
+| listing images |  listing images | ```docker image ls``` |
+| Building images From the current directory's Dockerfile | building from the current directory’s dockerfile | ```docker build``` | 	
+| Building images From a GIT remote repository |  Building images command Using a remote GIT repository | ```docker build github.com/creack/docker-firefox``` |
+| tagging and building	| This tagging and building | ```docker build -t eon/infinite``` |
+| Specifying the Build Context while creating a Dockerfile | This is use to Build an image from a Dockerfile	| ```docker build -f myDockerfile```|
+| Creating a Dockerfile from a URL | It wil help to create a dockerfile with a specific URL | ```curl example.com/remote/Dockerfile | docker build -f -``` |  
+| removing image |  to removing a7n image | ```docker image rm nginx``` |
+| Using a File or the Normal Input Stream to Load a Tarred Repository | Use STDIN or a tar archive to load an image | ```docker image load < ubuntu.tar.gz``` or ```docker build -f myOtherDockerfile ``` |
+| Image Saving to a Tar Archiveard Input Stream	| It is used Save one or more images to a tar archive | ```docker image save busybox > ubuntu.tar``` |
+| Showing the History of an Image | This command will let know the history of the image inside the docker | ``` image history``` |
+| Making an Image Out of a Container | This command will help you to take an image out of the container | ```docker container commit nginx``` |
+| image tagging	| We can use this image tagging | ```docker image tag nginx demo01/nginx``` |
+| pushing an image | We can push any image through this command | ```docker image push demo01/nginx``` |
+
+## 7. Networking
+| Command | Meaning | Syntax |
+| --- | --- | --- |
+| overlay network | This is used to establish a distributed network between many Docker daemon hosts | ```docker network create -d overlay MyOverlayNetwork``` |
+| Bridge network | To establish container test1 to bridge demo-bridge, type docker network connect demo-bridge test1 | ```docker network create -d bridge MyBridgeNetwork``` |
+| removing a network | to remove an overlay network | ```docker network rm MyOverlayNetwork``` |
+| network listing	|  to listing the overlay networks | ```docker network ls``` |
+| Getting Information About a Network | We can get information about an overlay network with the help of this command | ```docker network inspect MyOverlayNetwork``` |
+| Connecting a Running Container to a Network | By using this command we can connect a container to network | ```docker network connect MyOverlayNetwork nginx``` |
+| Connecting a Container to a Network When it Starts | When the container starts we can use this command to connect a container to network	| ```docker container run -it -d --network=MyOverlayNetwork nginx``` |
+| Disconnecting a Container from a Network | We can use this disconnecting a container from network | ```docker network disconnect MyOverlayNetwork nginx``` |
+| Exposing Ports | We can expose the empty ports using this command | ```EXPOSE <port_number>``` |
+
