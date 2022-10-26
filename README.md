@@ -12,7 +12,7 @@
 | --- | --- | --- |
 | Login to a Registry |   log in to your Registry | ``` docker login `````` docker login localhost:8080 ``` |
 | Logout from a registry |   log out from your Registry | ```docker logout``` ```docker logout localhost:8080``` |
-| Searching an image | By using this docker command you can search any image from your docker | ```search nginx ``````docker search --filter stars=3 --no-trun nginx``` |
+| Searching an image | By using this docker command you can search any image from your docker | ```search nginx ``` ```docker search --filter stars=3 --no-trun nginx``` |
 | Pulling an Image	|  can be used to download a specific image or set of images | ```docker image pull nginx``````docker image pull eon01/nginx localhost:5000/myadmin/nginx``` |
 | Pushing an image |  can be used to push a specific image or set of images | ```docker image push eon01/nginx``````docker image push eon01/nginx localhost:5000/myadmin/nginx``` |
 
