@@ -225,11 +225,13 @@ services:
 ```
 
 ## External links
+```
 services:
  web:
  external_links:
  - redis_1
  - project_db_1:mysql
+```
 
 ## Hosts
 ```
