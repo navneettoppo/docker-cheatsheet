@@ -82,3 +82,18 @@
 | Disconnecting a Container from a Network | We can use this disconnecting a container from network | ```docker network disconnect MyOverlayNetwork nginx``` |
 | Exposing Ports | We can expose the empty ports using this command | ```EXPOSE <port_number>``` |
 
+## 8. Cleaning Docker
+| Command | Meaning | Syntax |
+| --- | --- | --- |
+| Command for Removing a Running Container | We can remove a running container by using this command | ```docker container rm nginx``` |
+| Command for Removing a Container and its Volume	| We can use this command for removing the container and the things inside it | ```docker container rm -v nginx``` |
+| Command for Removing all Exited Containers | We can use this command for removing all the exited containers | ```docker container rm $(docker container ls -a -f status=exited -q)``` |
+| Command for Removing All Stopped Containers | We can remove all the stopped containers by using this command | ```docker container rm `docker container ls -a -q` ``` |
+| Command for Removing a Docker Image | This command is used fr removing a docker image | ```docker image rm nginx``` |
+| Command for Dangling Images	| We can dangle the images with this command | ```docker image rm $(docker image ls -f dangling=true -q)``` |
+| Command for Removing all Images	| We can remove all the image in the docker by using this commands | ```docker image rm $(docker image ls -a -q)``` | 
+| Commands for Delete all Untagged Images | We can delete all the untagged images with the use of this command | ```docker image rm -f $(docker image ls | grep "^<none>" | awk "{print $3}")``` |
+| Command for Stopping & Removing all Containers | For stopping and removing all the container we can use this command | ```docker container stop $(docker container ls -a -q) && docker container rm $(docker container ls -a -q)``` |
+| Command for Removing Dangling Volumes	| We can remove all the dangling volumes by using this command | ```docker volume rm $(docker volume ls -f dangling=true -q)``` |
+| Command for removing all unneeded (containers, images, networks and volumes) | This command is use to remove the unnecessary thing | ```docker system prune -f``` | 
+| Command for Clean all | We cam use this command for cleaning everything in the docker | ```docker system prune -a``` |
