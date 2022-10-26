@@ -10,11 +10,11 @@
 ## 2. Docker Registry and Repository
 | Command | Meaning | Syntax |
 | --- | --- | --- |
-| Login to a Registry |   log in to your Registry | ``` docker login `````` docker login localhost:8080 ``` |
-| Logout from a registry |   log out from your Registry | ```docker logout``` ```docker logout localhost:8080``` |
-| Searching an image | By using this docker command you can search any image from your docker | ```search nginx ``` ```docker search --filter stars=3 --no-trun nginx``` |
-| Pulling an Image	|  can be used to download a specific image or set of images | ```docker image pull nginx``` ```docker image pull eon01/nginx localhost:5000/myadmin/nginx``` |
-| Pushing an image |  can be used to push a specific image or set of images | ```docker image push eon01/nginx``` ```docker image push eon01/nginx localhost:5000/myadmin/nginx``` |
+| Login to a Registry |   log in to your Registry | ``` docker login ``` or ``` docker login localhost:8080 ``` |
+| Logout from a registry |   log out from your Registry | ```docker logout``` or ```docker logout localhost:8080``` |
+| Searching an image | By using this docker command you can search any image from your docker | ```search nginx ``` or ```docker search --filter stars=3 --no-trun nginx``` |
+| Pulling an Image	|  can be used to download a specific image or set of images | ```docker image pull nginx``` or ```docker image pull eon01/nginx localhost:5000/myadmin/nginx``` |
+| Pushing an image |  can be used to push a specific image or set of images | ```docker image push eon01/nginx``` or ```docker image push eon01/nginx localhost:5000/myadmin/nginx``` |
 
 ## 3. Running Comtainers
 | Command | Meaning | Syntax |
@@ -45,7 +45,7 @@
 | fetching about all container | fetching about every container | ```docker container ls -a``` or ```docker ps -a``` |
 | container log | We can use this command to see the container log | ```docker logs infinite``` |
 |‘tail -f’ Containers’ Logs | Container isn't running in the foreground, and if there isn't anything running in the foreground, Docker closes automatically | ```docker container logs infinite -f``` |
-| Inspecting Containers | inspecting containers	| ```docker container inspect infinite``` ```docker container inspect --format '' $(docker ps -q)```|
+| Inspecting Containers | inspecting containers	| ```docker container inspect infinite``` or ```docker container inspect --format '' $(docker ps -q)```|
 | Containers Events	| To obtain real-time events from the server, use docker events | ```docker system events infinite``` |
 | Public Ports | finding a public port | ```docker container port infinite``` |
 | Running Processes | displaying the running processes in the container	| ```docker container top infinite``` |
